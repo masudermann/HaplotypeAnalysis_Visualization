@@ -1,5 +1,6 @@
 # Early blight manuscript (change to proper title of paper) data analysis
 
+(Make prettier)
 The analysis from Anderson T and Sudermann M et al. happens in two phases:
 
 1) Generate haplotype cluster information from vcf file
