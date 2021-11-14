@@ -1,4 +1,4 @@
-# Haplotype analysis and visualization workflow 
+# Haplotype analysis and visualization 
 
 (Make prettier)
 The analysis from Anderson T and Sudermann M et al. happens in two phases:
