@@ -1,12 +1,11 @@
 # Haplotype analysis and visualization 
 
-(Make prettier)
 The analysis from Anderson T and Sudermann M et al. happens in two phases:
 
-1) Generate haplotype cluster information from vcf file
+1) Generate haplotype cluster information from VCF file
 2) Perform comparisons and visualize the results of the cluster analysis
 
-Note that these notes pertain to an ubuntu linux platform. Code is written in R and python3 and will work on other OS platforms with minor changes
+Code is written in R and Python3. The code was run on a Linux-based system.
 
 Further details are as follows:
 
