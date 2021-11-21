@@ -33,7 +33,7 @@ pandas
 scikit-learn
 system commands (os)
 
-#EXAMPLE COMMMAND - try running the following command in this current directory:
+# EXAMPLE COMMMAND - try running the following command in this current directory:
 python3 ./cluster_haplotypes.py './example_files/SL4.0ch09_subset.vcf' ch09 250000 100000 10 2 80 10
 
 This example code sets the following parameters:
