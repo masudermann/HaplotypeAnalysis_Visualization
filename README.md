@@ -1,4 +1,4 @@
-## Haplotype analysis and visualization 
+# Haplotype analysis and visualization 
 
 The analysis from Anderson T and Sudermann M et al. happens in two phases:
 
@@ -9,7 +9,7 @@ Code is written in R and Python3. The code was run on a Linux-based system.
 
 Further details are as follows:
 
-# PART 1:
+## PART 1:
 - Generate chromosome-level VCFs that contain no missing data. This can be accomplished by imputing or by filtering
 - Navigate to the folder containing the python3 script "cluster_haplotype.py" and run the script using the parameters of your choosing (see example command below)
 - Running the script takes a command of the following usage and a total of 8 REQUIRED arguments
@@ -33,7 +33,7 @@ pandas
 scikit-learn
 system commands (os)
 
-# EXAMPLE COMMMAND - try running the following command in this current directory:
+## EXAMPLE COMMMAND - try running the following command in this current directory:
 python3 ./cluster_haplotypes.py './example_files/SL4.0ch09_subset.vcf' ch09 250000 100000 10 2 80 10
 
 This example code sets the following parameters:
@@ -49,7 +49,7 @@ This example code sets the following parameters:
 You can modify the script "parallelize_haplotype_clustering.sh" in order to parallelize by chromosome and by windowing parameters.
 Each instance of cluster_haplotype.py uses a single thread, so scatter-gather parallelization will save you time in your analysis.
 
-# PART 2:
+## PART 2:
 Perform interactive visualizations and analyses of the cluster data in RStudio using the visualize_haplotypes.Rmd script as a starting point.
 Inside the markdown script are useful contrast and plotting functions that will get you started.
 See the visualize_haplotypes.html document for completed examples to gain insight into the possibilities of this analysis
