@@ -14,16 +14,24 @@ Further details are as follows:
 - Navigate to the folder containing the python3 script "cluster_haplotype.py" and run the script using the parameters of your choosing (see example command below)
 - Running the script takes a command of the following usage and a total of 8 REQUIRED arguments
 
-"python3 cluster_haplotypes.py [vcf_file] [chromosome_basename] [window_size] [window_step_size] [min_snps_cutoff] [min d] [max d] [step d]"
+python3 cluster_haplotypes.py [vcf_file] [chromosome_basename] [window_size] [window_step_size] [min_snps_cutoff] [min d] [max d] [step d]
 
 Argument 1: Specify location of uncompressed chromosome level vcf file
+
 Argument 2: Specify output file basename (typically the chromosome number, i.e. ch09)
+
 Argument 3: Set window size to for iterating through the genome - MUST BE AN EVEN NUMBER
+
 Argument 4: Set step size for window iterations
+
 Argument 5: Set the minimum number of SNPs in each window in order to perform calculations, otherwise outputs NaN
+
 Argument 6: Set the minimum distance threshold for merging clusters
+
 Argument 7: Set the maximum distance threshold for merging clusters
+
 Argument 8: Set the distance (d) step size
+
 See the associated publication and supplementary methods for information on these parameters
 
 The following python dependencies are required:
