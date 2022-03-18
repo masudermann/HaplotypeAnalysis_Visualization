@@ -1,6 +1,6 @@
 # Haplotype analysis and visualization 
 
-The analysis from Anderson T and Sudermann M et al. happens in two phases:
+The analysis from *Anderson T and Sudermann M* et al. happens in two phases:
 
 1) Generate haplotype cluster information from VCF file
 2) Perform comparisons and visualize the results of the cluster analysis
