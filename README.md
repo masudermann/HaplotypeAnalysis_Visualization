@@ -7,6 +7,10 @@ The analysis from Anderson T and Sudermann M et al. happens in two phases:
 
 Code is written in R and Python3. The code was run on a Linux-based system.
 
+This analysis method for the identification of homologous haplotypes is both simple and computationally efficient. 
+Sequences were windowed and stepped according to user specifications. Next, a hierarchical agglomerative clustering model is built using Ward distance. Sequences in a window are then clustered together into homologous haplotypes if their pairwise distance falls under a distance threshold. The program determines the distance threshold, d, by iterating through a user-specified range and identifying the value of d that maximizes the mean silhouette coefficient for all sequences, thus allowing the clustering algorithm to account for unequal information content across genomic windows. The code is built on Scikit-learn’s clustering module ![image](https://user-images.githubusercontent.com/89535005/158931341-15cc03e8-da98-4847-b747-ce10a2a37fcf.png)
+
+
 Further details are as follows:
 
 ## PART 1:
