@@ -39,11 +39,11 @@ Argument 8: Set the distance (d) step size
 See the associated publication and supplementary methods for information on these parameters
 
 The following python dependencies are required:
-scikit-allel (we are using version 1.2.1)
-numpy
-pandas
-scikit-learn
-system commands (os)
+- scikit-allel (we are using version 1.2.1)
+- numpy
+- pandas
+- scikit-learn
+- system commands (os)
 
 ## EXAMPLE COMMMAND - try running the following command in this current directory:
 python3 ./cluster_haplotypes.py './example_files/SL4.0ch09_subset.vcf' ch09 250000 100000 10 2 80 10
@@ -68,5 +68,3 @@ See the visualize_haplotypes.html document for completed examples to gain insigh
 
 If you have any questions, shoot me an email at tayloranthonyanderson@gmail.com
 Happy introgression hunting!
-
-
