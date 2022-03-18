@@ -1,9 +1,4 @@
----
-title: "Additional information on haplotype analysis and visualization"
-output: 
-  html_document:
-    keep_md: true
----
+# Additional information on haplotype analysis and visualization
 
 This analysis method for the identification of homologous haplotypes is both simple and computationally efficient. 
 
