@@ -11,8 +11,6 @@ This analysis method for the identification of homologous haplotypes is both sim
 
 Sequences were windowed and stepped according to user specifications. Next, a hierarchical agglomerative clustering model is built using Ward distance. Sequences in a window are then clustered together into homologous haplotypes if their pairwise distance falls under a distance threshold. The program determines the distance threshold, d, by iterating through a user-specified range and identifying the value of d that maximizes the mean silhouette coefficient for all sequences, thus allowing the clustering algorithm to account for unequal information content across genomic windows. The code is built on Scikit-learn’s clustering module.
 
-Further details are as follows:
-
 ## PART 1
 - Generate chromosome-level VCFs that contain no missing data. This can be accomplished by imputing or by filtering
 - Navigate to the folder containing the python3 script "cluster_haplotype.py" and run the script using the parameters of your choosing (see example command below)
