@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# This script was originally authored by Taylor A Anderson. Please send questions or comments to tayloranthonyanderson@gmail.com or text/call Taylor @ 707-478-7156
+# This script was originally authored by Taylor A Anderson. Please send questions or comments to tayloranthonyanderson@gmail.com
 # verified for Python3 on 10-26-2020 (what a year eh?)
 
 #INPUT: A VCF file for a single chromosome (imputed with no missing data) and 7 parameters
