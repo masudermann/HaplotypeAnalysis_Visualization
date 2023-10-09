@@ -42,13 +42,14 @@ Try running the following command in this current directory:
 python3 ./Haplotype_analysis_scripts/cluster_haplotypes.py ./Example_files/SL4.0ch09_subset.vcf ch09 250000 100000 10 2 80 10
 ```
 This example code sets the following parameters:  
-> - `a chromosome 9 file [will need to change to your input vcf file]`  
-> - `an output filestem "ch09" [change to chromosome name you want as filestem]`
-> - `a window size of 250 Kb [even integer]`  
-> - `a window step size of 100 Kb [even integer]`  
-> - `a minimum d of 2 [even integer]`  
-> - `a maximum d of 80 [even integer]`  
-> - `a step size for d of 10 [integer]`
+> - `Argument 1: a chromosome 9 file [will need to change to your input vcf file]`
+> - `Argument 2: an output filestem "ch09" [change to chromosome name you want as filestem]`
+> - `Argument 3: a window size of 250 Kb [even integer]`  
+> - `Argument 4: a window step size of 100 Kb [even integer]`
+> - `Argument 5: a minimum number of SNPs of 10 [integar]`
+> - `Argument 6: a minimum d of 2 [even integer]`  
+> - `Argument 7: a maximum d of 80 [even integer]`  
+> - `Argument 8: a step size for d of 10 [integer]`
 
 You can modify the script "parallelize_haplotype_clustering.sh" in order to parallelize by chromosome and by windowing parameters.
 Each instance of `cluster_haplotype.py` uses a single thread, so scatter-gather parallelization will save you time in your analysis.
