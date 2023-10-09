@@ -32,7 +32,7 @@ import sys; print('imported system commands')
 if(len(sys.argv[1:])!=8):
     print("\n")
     print("!! USER ERROR !!")
-    print("Usage: python3 classifyHaplotypes.py [vcf_file] [chromosome_basename] [window_size] [window_step_size] [min_snps_cutoff] [min d] [max d] [step d]\n")
+    print("Usage: python3 cluster_haplotypes.py [vcf_file] [chromosome_basename] [window_size] [window_step_size] [min_snps_cutoff] [min d] [max d] [step d]\n")
     print("arg1: Specify location of uncompressed chromosome level vcf file\n")
     print("arg2: Specify output file basename (typically the chromosome number)\n")
     print("arg3: Set window size to for iterating through the genome - MUST BE AN EVEN NUMBER\n")
