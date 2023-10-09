@@ -9,7 +9,7 @@ Code is written in R and Python3. The code was run on a Linux-based system.
 
 This analysis method for the identification of homologous haplotypes is both simple and computationally efficient. 
 
-Sequences were windowed and stepped according to user specifications. Next, a hierarchical agglomerative clustering model is built using Ward distance. Sequences in a window are then clustered together into homologous haplotypes if their pairwise distance falls under a distance threshold. The program determines the distance threshold, d, by iterating through a user-specified range and identifying the value of d that maximizes the mean silhouette coefficient for all sequences, thus allowing the clustering algorithm to account for unequal information content across genomic windows. The code is built on Scikit-learn’s clustering module.
+Sequences were windowed and stepped according to user specifications. Next, a hierarchical agglomerative clustering model is built using Ward distance. Sequences in a window are then clustered together into homologous haplotypes if their pairwise distance falls under a distance threshold. The program determines the distance threshold, *d*, by iterating through a user-specified range and identifying the value of *d* that maximizes the mean silhouette coefficient for all sequences, thus allowing the clustering algorithm to account for unequal information content across genomic windows. The code is built on Scikit-learn’s clustering module.
 
 ## PART 1
 - Generate chromosome-level VCFs that contain no missing data. This can be accomplished by imputing or by filtering
@@ -18,14 +18,14 @@ Sequences were windowed and stepped according to user specifications. Next, a hi
 ```bash
 python3 ./Haplotype_analysis_scripts/cluster_haplotypes.py [vcf_file] [chromosome_basename] [window_size] [window_step_size] [min_snps_cutoff] [min d] [max d] [step d]
 ```
--  `Argument 1: Specify location of uncompressed chromosome level vcf file`
--  `Argument 2: Specify output file basename (typically the chromosome number, i.e. ch09)`  
--  `Argument 3: Set window size to for iterating through the genome - MUST BE AN EVEN NUMBER`  
--  `Argument 4: Set step size for window iterations`
--  `Argument 5: Set the minimum number of SNPs in each window, otherwise outputs NaN`  
--  `Argument 6: Set the minimum distance threshold for merging clusters`
--  `Argument 7: Set the maximum distance threshold for merging clusters`  
--  `Argument 8: Set the distance (d) step size`
+-  `Argument 1: [vcf_file]` Specify location of uncompressed chromosome level vcf file
+-  `Argument 2: [chromosome_basename]` Specify output file basename (typically the chromosome number, i.e. ch09) 
+-  `Argument 3: [window_size]`  Set window size to for iterating through the genome - MUST BE AN EVEN NUMBER
+-  `Argument 4: [window_step_size]`  Set step size for window iterations
+-  `Argument 5: [min_snps_cutoff]`  Set the minimum number of SNPs in each window, otherwise outputs NaN
+-  `Argument 6: [min d]`  Set the minimum distance threshold for merging clusters
+-  `Argument 7: [max d]`  Set the maximum distance threshold for merging clusters
+-  `Argument 8: [step d]`  Set the distance (d) step size
 
 See the associated publication and supplementary methods for information on these parameters
 
