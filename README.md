@@ -16,7 +16,7 @@ Sequences were windowed and stepped according to user specifications. Next, a hi
 - Navigate to the folder containing the python3 script "cluster_haplotype.py" and run the script using the parameters of your choosing (see example command below)
 - Running the script takes a command of the following usage and a total of 8 REQUIRED arguments
 ```bash
-python3 Haplotype_analysis_scripts/cluster_haplotypes.py [vcf_file] [chromosome_basename] [window_size] [window_step_size] [min_snps_cutoff] [min d] [max d] [step d]
+python3 ./Haplotype_analysis_scripts/cluster_haplotypes.py [vcf_file] [chromosome_basename] [window_size] [window_step_size] [min_snps_cutoff] [min d] [max d] [step d]
 ```
 -  `Argument 1: Specify location of uncompressed chromosome level vcf file`
 -  `Argument 2: Specify output file basename (typically the chromosome number, i.e. ch09)`  
@@ -39,7 +39,7 @@ The following python dependencies are required:
 ## EXAMPLE COMMMAND 
 Try running the following command in this current directory:
 ```bash
-python3 Haplotype_analysis_scripts/cluster_haplotypes.py ./example_files/SL4.0ch09_subset.vcf ch09 250000 100000 10 2 80 10
+python3 ./Haplotype_analysis_scripts/cluster_haplotypes.py ./Example_files/SL4.0ch09_subset.vcf ch09 250000 100000 10 2 80 10
 ```
 This example code sets the following parameters:  
 > - `a chromosome 9 file [will need to change to your input vcf file]`  
@@ -54,8 +54,8 @@ You can modify the script "parallelize_haplotype_clustering.sh" in order to para
 Each instance of `cluster_haplotype.py` uses a single thread, so scatter-gather parallelization will save you time in your analysis.
 
 ## PART 2
-Perform interactive visualizations and analyses of the cluster data in RStudio using the [`visualize_haplotypes.Rmd`](Visualization/blob/main/Haplotype_analysis_scripts/visualize_haplotypes.Rmd) script as a starting point.
-Inside the markdown script are useful contrast and plotting functions that will get you started.
-See the [`visualize_haplotypes.html`] ([https://github.com/cggh/scikit-allel](https://github.com/masudermann/HaplotypeAnalysis_Visualization/blob/main/Haplotype_analysis_scripts/visualize_haplotypes.Rmd) document for completed examples to gain insight into the possibilities of this analysis
+-  Perform interactive visualizations and analyses of the cluster data in RStudio using the [`visualize_haplotypes.Rmd`](Visualization/blob/main/Haplotype_analysis_scripts/visualize_haplotypes.Rmd) script as a starting point.  
+-  Inside the Rmarkdown script are useful contrast and plotting functions that will get you started.  
+-  Download and view the [`visualize_haplotypes.html`](https://github.com/masudermann/HaplotypeAnalysis_Visualization/blob/main/Example_files/visualize_haplotypes.html) document for completed examples to gain insight into the possibilities of this analysis
 
 Happy introgression hunting!
