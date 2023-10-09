@@ -22,7 +22,7 @@ python3 cluster_haplotypes.py [vcf_file] [chromosome_basename] [window_size] [wi
 -  `Argument 2: Specify output file basename (typically the chromosome number, i.e. ch09)`  
 -  `Argument 3: Set window size to for iterating through the genome - MUST BE AN EVEN NUMBER`  
 -  `Argument 4: Set step size for window iterations`
--  `Argument 5: Set the minimum number of SNPs in each window in order to perform calculations, otherwise outputs NaN`  
+-  `Argument 5: Set the minimum number of SNPs in each window, otherwise outputs NaN`  
 -  `Argument 6: Set the minimum distance threshold for merging clusters`
 -  `Argument 7: Set the maximum distance threshold for merging clusters`  
 -  `Argument 8: Set the distance (d) step size`
