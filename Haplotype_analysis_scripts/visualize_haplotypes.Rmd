@@ -114,7 +114,7 @@ rename_samples <- function(gt, rename){
 # Perform pairwise contrasts relative to a benchmark for a particular chromosomal region
 ```{r}
 #Load the dataset
-data=read.csv("HaplotypeAnalysis_Visualization/example_files/ch09_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv", row.names = 1)
+data=read.csv("HaplotypeAnalysis_Visualization/Example_files/ch09_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv", row.names = 1)
 
 #Look at the distribution of d thresholds
 hist(data$dist)
@@ -125,7 +125,7 @@ hist(data$dist)
 dataRecode <- compare_clusters(gt=data[data$Chromosome == "ch09",], benchmark="191163", variable="hclust")
 
 #Load a rename file and rename samples to something more human readable, then subset by the samples in this file
-rename <- read.table("HaplotypeAnalysis_Visualization/example_files/AccessionRename.txt", sep = "\t", stringsAsFactors = F)
+rename <- read.table("HaplotypeAnalysis_Visualization/Example_files/AccessionRename.txt", sep = "\t", stringsAsFactors = F)
 dataRecode <- rename_samples(dataRecode, rename)
 subset = subset(dataRecode, Entry %in% rename[,2])
 subset$Entry <- factor(subset$Entry, levels = rename[,2])
@@ -159,25 +159,25 @@ ggplot(data=subset[subset$Positions >= xmin & subset$Positions <= xmax & subset$
 ## Prepare a dataset including all chromosome-level files
 ```{r, eval=FALSE}
 # Merge single chromosome files together (if applicable)
-data01=read.csv("HaplotypeAnalysis_Visualization/example_files/ch01_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
-data02=read.csv("HaplotypeAnalysis_Visualization/example_files/ch02_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
-data03=read.csv("HaplotypeAnalysis_Visualization/example_files/ch03_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
-data04=read.csv("HaplotypeAnalysis_Visualization/example_files/ch04_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
-data05=read.csv("HaplotypeAnalysis_Visualization/example_files/ch05_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
-data06=read.csv("HaplotypeAnalysis_Visualization/example_files/ch06_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
-data07=read.csv("HaplotypeAnalysis_Visualization/example_files/ch07_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
-data08=read.csv("HaplotypeAnalysis_Visualization/example_files/ch08_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
-data09=read.csv("HaplotypeAnalysis_Visualization/example_files/ch09_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
-data10=read.csv("HaplotypeAnalysis_Visualization/example_files/ch10_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
-data11=read.csv("HaplotypeAnalysis_Visualization/example_files/ch11_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
-data12=read.csv("HaplotypeAnalysis_Visualization/example_files/ch12_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
+data01=read.csv("HaplotypeAnalysis_Visualization/Example_files/ch01_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
+data02=read.csv("HaplotypeAnalysis_Visualization/Example_files/ch02_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
+data03=read.csv("HaplotypeAnalysis_Visualization/Example_files/ch03_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
+data04=read.csv("HaplotypeAnalysis_Visualization/Example_files/ch04_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
+data05=read.csv("HaplotypeAnalysis_Visualization/Example_files/ch05_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
+data06=read.csv("HaplotypeAnalysis_Visualization/Example_files/ch06_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
+data07=read.csv("HaplotypeAnalysis_Visualization/Example_files/ch07_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
+data08=read.csv("HaplotypeAnalysis_Visualization/Example_files/ch08_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
+data09=read.csv("HaplotypeAnalysis_Visualization/Example_files/ch09_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
+data10=read.csv("HaplotypeAnalysis_Visualization/Example_files/ch10_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
+data11=read.csv("HaplotypeAnalysis_Visualization/Example_files/ch11_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
+data12=read.csv("HaplotypeAnalysis_Visualization/Example_files/ch12_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
 all <- rbind(data01,data02,data03,data04,data05,data06,data07,data08,data09,data10,data11,data12)
 write.csv(all, "allChr_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv")
 ```
 
 ## Load the concatenated dataset
 ```{r}
-data=read.csv("HaplotypeAnalysis_Visualization/example_files/allChr_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv", row.names = 1)
+data=read.csv("allChr_window1000000_step250000_cutoff20_dmin20_dmax200_dstep4_pcacomp2.csv", row.names = 1)
 data$hclust <- factor(data$hclust)
 hist(data$dist)
 stepSize = 1000000
