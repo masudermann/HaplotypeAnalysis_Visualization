@@ -37,7 +37,7 @@ The following python dependencies are required:
 > - `system commands (os)`
 
 ## EXAMPLE COMMMAND 
-Try running the following command in this current directory:
+The following command can be run in the `HaplotypeAnalysis_Visualization` directory:
 ```bash
 python3 ./Haplotype_analysis_scripts/cluster_haplotypes.py ./Example_files/SL4.0ch09_subset.vcf ch09 250000 100000 10 2 80 10
 ```
