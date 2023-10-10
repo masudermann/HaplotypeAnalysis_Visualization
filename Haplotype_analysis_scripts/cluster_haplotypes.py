@@ -8,7 +8,7 @@
 #OUTPUTS: A file containing PCs, hierarchically defined clusters for each sample*windowPosition into folder where run
 
 #EXAMPLE COMMMAND
-# The command "python3 ./cluster_haplotypes.py './example_files/SL4.0ch09_subset.vcf' ch09 250000 100000 10 2 80 10" would set the following parameters:
+# The command "python3 HaplotypeAnalysis_Visualization/Haplotype_analysis_scripts/cluster_haplotypes.py 'HaplotypeAnalysis_Visualization/example_files/SL4.0ch09_subset.vcf' ch09 250000 100000 10 2 80 10" would set the following parameters:
 #   a chromosome 9 file [will need to change to your input vcf file]
 #   an output filestem "ch09" [change to chromosome name you want as filestem]
 #   a window size of 250 Kb [even integer]
