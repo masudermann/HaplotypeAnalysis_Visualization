@@ -15,6 +15,7 @@ Sequences were windowed and stepped according to user specifications. Next, a hi
 - Generate chromosome-level VCFs that contain no missing data. This can be accomplished by imputing or by filtering
 - Navigate to the folder containing the python3 script "cluster_haplotype.py" and run the script using the parameters of your choosing (see example command below)
 - Running the script takes a command of the following usage and a total of 8 REQUIRED arguments
+- The following command assues that the repository has been cloned and user is working within HaplotypeAnalysis_Visualization directory
 ```bash
 python3 ./Haplotype_analysis_scripts/cluster_haplotypes.py [vcf_file] [chromosome_basename] [window_size] [window_step_size] [min_snps_cutoff] [min d] [max d] [step d]
 ```
