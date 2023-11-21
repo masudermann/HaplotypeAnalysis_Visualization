@@ -1,6 +1,8 @@
 # Haplotype analysis and visualization 
 
-The analysis from Anderson T and Sudermann M et al. happens in two phases:
+This repository features the analyses described in [Detection of trait donors and QTL boundaries for early blight resistance using local ancestry inference in a library of genomic sequences for tomato]( https://doi.org/10.1111/tpj.16495)  (Anderson TA and Sudermann MA et al. 2023). 
+
+It happens in two phases:
 
 1) Generate haplotype cluster information from VCF file
 2) Perform comparisons and visualize the results of the cluster analysis
